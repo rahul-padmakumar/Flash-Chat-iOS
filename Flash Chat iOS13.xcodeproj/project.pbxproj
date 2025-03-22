@@ -17,14 +17,14 @@
 		0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62818E235DF01000E35CAF /* LoginViewController.swift */; };
 		0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628190235DF01B00E35CAF /* ChatViewController.swift */; };
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
+		B735B18D2D8E8F9000A81378 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735B18B2D8E8F9000A81378 /* MessageCell.swift */; };
+		B735B18E2D8E8F9000A81378 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B735B18C2D8E8F9000A81378 /* MessageCell.xib */; };
 		B79CD9852D8D7E4300BB7B8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B79CD9842D8D7E4300BB7B8E /* GoogleService-Info.plist */; };
 		B79CD9872D8D7ECE00BB7B8E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B79CD9862D8D7EC600BB7B8E /* .gitignore */; };
 		B79CD98A2D8D800D00BB7B8E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B79CD9892D8D800D00BB7B8E /* FirebaseAuth */; };
 		B79CD98C2D8D800D00BB7B8E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B79CD98B2D8D800D00BB7B8E /* FirebaseFirestore */; };
 		B79CD98E2D8DB3E300BB7B8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79CD98D2D8DB3E300BB7B8E /* Constants.swift */; };
 		B7B90FDB2D8E4D0500CDEEC8 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B90FDA2D8E4D0500CDEEC8 /* Messages.swift */; };
-		B7B90FDE2D8E52D500CDEEC8 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7B90FDD2D8E52D500CDEEC8 /* MessageCell.xib */; };
-		B7B90FDF2D8E52D500CDEEC8 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B90FDC2D8E52D500CDEEC8 /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +40,12 @@
 		0B62818E235DF01000E35CAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B628190235DF01B00E35CAF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0B62819D235F0F4D00E35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B735B18B2D8E8F9000A81378 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		B735B18C2D8E8F9000A81378 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		B79CD9842D8D7E4300BB7B8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B79CD9862D8D7EC600BB7B8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B79CD98D2D8DB3E300BB7B8E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B7B90FDA2D8E4D0500CDEEC8 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Messages.swift; path = "Flash Chat iOS13/Messages.swift"; sourceTree = SOURCE_ROOT; };
-		B7B90FDC2D8E52D500CDEEC8 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		B7B90FDD2D8E52D500CDEEC8 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				0B62817C235DEE8100E35CAF /* Main.storyboard */,
-				B7B90FDC2D8E52D500CDEEC8 /* MessageCell.swift */,
-				B7B90FDD2D8E52D500CDEEC8 /* MessageCell.xib */,
+				B735B18B2D8E8F9000A81378 /* MessageCell.swift */,
+				B735B18C2D8E8F9000A81378 /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 				B79CD9852D8D7E4300BB7B8E /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
 				B79CD9872D8D7ECE00BB7B8E /* .gitignore in Resources */,
-				B7B90FDE2D8E52D500CDEEC8 /* MessageCell.xib in Resources */,
+				B735B18E2D8E8F9000A81378 /* MessageCell.xib in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +212,7 @@
 				B79CD98E2D8DB3E300BB7B8E /* Constants.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
-				B7B90FDF2D8E52D500CDEEC8 /* MessageCell.swift in Sources */,
+				B735B18D2D8E8F9000A81378 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
