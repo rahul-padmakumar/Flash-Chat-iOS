@@ -8,11 +8,14 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
+    
+    let db = Firestore.firestore()
     
     let messages = [
         Messages(sender: "2@test.com", message: "Hi"),
@@ -33,9 +36,26 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         tableView.dataSource = self
+        tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        
+        let messageBody = messageTextfield.text
+        let sender = Auth.auth().currentUser?.email
+        
+        if let message = messageTextfield.text, let sender = Auth.auth().currentUser?.email{
+            db.collection(Constants.FStore.collectionName).addDocument(data: [
+                Constants.FStore.bodyField: message,
+                Constants.FStore.senderField: sender
+            ]) { error in
+                if error != nil{
+                    print(error?.localizedDescription ?? "")
+                } else {
+                    print("Data send")
+                }
+            }
+        }
     }
 }
 
@@ -45,9 +65,8 @@ extension ChatViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
-        cell.textLabel?.text = messages[indexPath.row].message
-        cell.textLabel?.textColor = UIColor.white
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
+        cell.messageLabel.text = messages[indexPath.row].message
         return cell
     }
 }

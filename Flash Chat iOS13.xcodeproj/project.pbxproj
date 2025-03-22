@@ -23,6 +23,8 @@
 		B79CD98C2D8D800D00BB7B8E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B79CD98B2D8D800D00BB7B8E /* FirebaseFirestore */; };
 		B79CD98E2D8DB3E300BB7B8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79CD98D2D8DB3E300BB7B8E /* Constants.swift */; };
 		B7B90FDB2D8E4D0500CDEEC8 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B90FDA2D8E4D0500CDEEC8 /* Messages.swift */; };
+		B7B90FDE2D8E52D500CDEEC8 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7B90FDD2D8E52D500CDEEC8 /* MessageCell.xib */; };
+		B7B90FDF2D8E52D500CDEEC8 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B90FDC2D8E52D500CDEEC8 /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B79CD9862D8D7EC600BB7B8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B79CD98D2D8DB3E300BB7B8E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B7B90FDA2D8E4D0500CDEEC8 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Messages.swift; path = "Flash Chat iOS13/Messages.swift"; sourceTree = SOURCE_ROOT; };
+		B7B90FDC2D8E52D500CDEEC8 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		B7B90FDD2D8E52D500CDEEC8 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				0B62817C235DEE8100E35CAF /* Main.storyboard */,
+				B7B90FDC2D8E52D500CDEEC8 /* MessageCell.swift */,
+				B7B90FDD2D8E52D500CDEEC8 /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,8 +151,9 @@
 		0B62816B235DEE8100E35CAF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = "Angela Yu";
 				TargetAttributes = {
 					0B628172235DEE8100E35CAF = {
@@ -185,6 +192,7 @@
 				B79CD9852D8D7E4300BB7B8E /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
 				B79CD9872D8D7ECE00BB7B8E /* .gitignore in Resources */,
+				B7B90FDE2D8E52D500CDEEC8 /* MessageCell.xib in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +212,7 @@
 				B79CD98E2D8DB3E300BB7B8E /* Constants.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
+				B7B90FDF2D8E52D500CDEEC8 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +264,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -265,6 +275,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -315,6 +326,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -325,6 +337,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
