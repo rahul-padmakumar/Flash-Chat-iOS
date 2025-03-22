@@ -22,6 +22,7 @@
 		B79CD98A2D8D800D00BB7B8E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B79CD9892D8D800D00BB7B8E /* FirebaseAuth */; };
 		B79CD98C2D8D800D00BB7B8E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B79CD98B2D8D800D00BB7B8E /* FirebaseFirestore */; };
 		B79CD98E2D8DB3E300BB7B8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79CD98D2D8DB3E300BB7B8E /* Constants.swift */; };
+		B7B90FDB2D8E4D0500CDEEC8 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B90FDA2D8E4D0500CDEEC8 /* Messages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B79CD9842D8D7E4300BB7B8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B79CD9862D8D7EC600BB7B8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B79CD98D2D8DB3E300BB7B8E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B7B90FDA2D8E4D0500CDEEC8 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Messages.swift; path = "Flash Chat iOS13/Messages.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		0B628194235DF03A00E35CAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B7B90FDA2D8E4D0500CDEEC8 /* Messages.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
+				B7B90FDB2D8E4D0500CDEEC8 /* Messages.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
