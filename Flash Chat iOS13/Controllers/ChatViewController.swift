@@ -52,6 +52,8 @@ class ChatViewController: UIViewController {
                             )
                             DispatchQueue.main.async{
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                         }
                     }
@@ -88,7 +90,19 @@ extension ChatViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
+        let currentUser = Auth.auth().currentUser?.email
         cell.messageLabel.text = messages[indexPath.row].message
+        if messages[indexPath.row].sender == currentUser{
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.lightPurple)
+            cell.messageLabel.textColor = UIColor(named: Constants.BrandColors.purple)
+            cell.meAvatarImage.isHidden = false
+            cell.youAvatarImage.isHidden = true
+        } else {
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.purple)
+            cell.messageLabel.textColor = UIColor(named: Constants.BrandColors.lightPurple)
+            cell.meAvatarImage.isHidden = true
+            cell.youAvatarImage.isHidden = false
+        }
         return cell
     }
 }

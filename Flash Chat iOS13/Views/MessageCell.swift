@@ -10,8 +10,11 @@ import UIKit
 
 class MessageCell: UITableViewCell {
 
+    @IBOutlet weak var meAvatarImage: UIImageView!
+    @IBOutlet weak var youAvatarImage: UIImageView!
     @IBOutlet weak var messageBubble: UIView!
     @IBOutlet weak var messageLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         messageBubble.layer.cornerRadius =
