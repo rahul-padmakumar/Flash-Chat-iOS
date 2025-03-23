@@ -62,6 +62,8 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendPressed(_ sender: UIButton) {
         
+        messageTextfield.endEditing(true)
+        
         if let message = messageTextfield.text, let sender = Auth.auth().currentUser?.email{
             db.collection(Constants.FStore.collectionName).addDocument(data: [
                 Constants.FStore.bodyField: message,
@@ -71,6 +73,7 @@ class ChatViewController: UIViewController {
                 if error != nil{
                     print(error?.localizedDescription ?? "")
                 } else {
+                    self.messageTextfield.text = ""
                     print("Data send")
                 }
             }
