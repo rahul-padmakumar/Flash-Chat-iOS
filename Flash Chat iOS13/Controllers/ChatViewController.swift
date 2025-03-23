@@ -17,11 +17,7 @@ class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    let messages = [
-        Messages(sender: "2@test.com", message: "Hi"),
-        Messages(sender: "1@test.com", message: "Heyy"),
-        Messages(sender: "2@test.com", message: "Whats up!")
-    ]
+    var messages: [Messages] = []
     
     @IBAction func onLogoutPressed(_ sender: UIBarButtonItem) {
         do{
@@ -37,6 +33,31 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+        loadMessages()
+    }
+    
+    func loadMessages(){
+        db.collection(Constants.FStore.collectionName).addSnapshotListener { snapshot, error in
+            self.messages = []
+            if error != nil{
+                print(error!)
+            } else {
+                if let safeSnapshotDoc = snapshot?.documents{
+                    for doc in safeSnapshotDoc{
+                        let data = doc.data()
+                        if let sender = data[Constants.FStore.senderField] as? String,
+                           let message = data[Constants.FStore.bodyField] as? String{
+                            self.messages.append(
+                                Messages(sender: sender, message: message)
+                            )
+                            DispatchQueue.main.async{
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
